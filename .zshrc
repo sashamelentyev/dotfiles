@@ -10,8 +10,10 @@ PROTOC="protoc-$LAST_PROTOBUF_VERSION-$OS-$ARCH.zip"
 alias update="
     go install golang.org/dl/$LAST_GOLANG_VERSION@latest;
     $LAST_GOLANG_VERSION download;
+
     sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest;
+
     curl -LO $PB_REL/download/v$LAST_PROTOBUF_VERSION/$PROTOC;
-    unzip $PROTOC -d $HOME/.local;
+    unzip -o $PROTOC -d $HOME/.local;
     export PATH=$PATH:$HOME/.local/bin;
 "
