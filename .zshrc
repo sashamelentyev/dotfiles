@@ -3,6 +3,10 @@ alias ..="cd .."
 
 # Shortcuts
 alias c="clear"
+alias g="git"
+alias ga="git add ."
+alias gc="git commit"
+alias gp="git push original "
 
 LAST_GOLANG_VERSION=$(git ls-remote --tags --sort="v:refname" git://github.com/golang/go.git | grep "go" | grep -v "rc" | grep -v "beta" | tail -n1 | sed "s/.*\///")
 PB_REL="https://github.com/protocolbuffers/protobuf/releases"
