@@ -12,6 +12,7 @@ alias update="
     $LAST_GOLANG_VERSION download;
 
     sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest;
+    sudo go install entgo.io/ent/cmd/ent@latest;
 
     curl -LO $PB_REL/download/v$LAST_PROTOBUF_VERSION/$PROTOC;
     unzip -o $PROTOC -d $HOME/.local;
