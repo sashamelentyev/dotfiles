@@ -9,6 +9,8 @@ ARCH="x86_64"
 PROTOC="protoc-$LAST_PROTOBUF_VERSION-$OS-$ARCH.zip"
 
 alias update="
+    sudo softwareupdate -i -a;
+
     go install golang.org/dl/$LAST_GOLANG_VERSION@latest;
     $LAST_GOLANG_VERSION download;
 
