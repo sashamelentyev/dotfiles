@@ -14,9 +14,9 @@ alias update="
     go install golang.org/dl/$LAST_GOLANG_VERSION@latest;
     $LAST_GOLANG_VERSION download;
 
-    sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest;
-    sudo go install entgo.io/ent/cmd/ent@latest;
-    sudo go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest;
+    go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest;
+    go install entgo.io/ent/cmd/ent@latest;
+    go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest;
 
     curl -LO $PB_REL/download/v$LAST_PROTOBUF_VERSION/$PROTOC;
     unzip -o $PROTOC -d $HOME/.local;
