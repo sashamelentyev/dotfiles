@@ -22,3 +22,6 @@ alias update="
     unzip -o $PROTOC -d $HOME/.local;
     export PATH=$PATH:$HOME/.local/bin;
 "
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
