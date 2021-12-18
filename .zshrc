@@ -1,3 +1,12 @@
+export ZSH="${HOME}/.oh-my-zsh"
+
+plugins=(
+  git
+  golang
+)
+
+source $ZSH/oh-my-zsh.sh
+
 # Navigation
 alias ..="cd .."
 
