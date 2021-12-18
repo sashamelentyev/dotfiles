@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Navigation
 alias ..="cd .."
 
