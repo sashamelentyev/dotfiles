@@ -6,7 +6,7 @@ alias ..="cd .."
 # Shortcuts
 alias c="clear"
 
-function lint(){
+lint(){
   case $1 in
     go)
       golangci-lint run
