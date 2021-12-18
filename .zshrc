@@ -5,6 +5,10 @@ alias ..="cd .."
 
 # Shortcuts
 alias c="clear"
+alias p="cd ~/Projects"
+
+# Always use color output for `ls`
+alias ls="command ls --color"
 
 lint(){
   case $1 in
