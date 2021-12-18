@@ -3,7 +3,17 @@ alias ..="cd .."
 
 # Shortcuts
 alias c="clear"
-alias gocilint="golangci-lint run"
+
+function lint(){
+  case $1 in
+    go)
+      golangci-lint run
+      ;;
+    *)
+      echo ""
+      ;;
+  esac
+}
 
 alias update='function _update(){
     LAST_GOLANG_VERSION=$(git ls-remote --tags --sort="v:refname" git://github.com/golang/go.git | grep "go" | grep -v "rc" | grep -v "beta" | tail -n1 | sed "s/.*\///")
