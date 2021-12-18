@@ -8,6 +8,11 @@ alias p="cd ~/Projects"
 # Always use color output for `ls`
 alias ls="command ls --color"
 
+# VIM
+export EDITOR="nvim"
+alias vi="nvim"
+alias vim="nvim"
+
 lint(){
   case $1 in
     go)
