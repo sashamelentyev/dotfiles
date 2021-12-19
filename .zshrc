@@ -60,8 +60,8 @@ update(){
 
   curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz;
   tar xzf "$NVIM";
+  rm -rf "$NVIM";
   export PATH="$PATH":"$HOME"/nvim-osx64/bin;
-  rm -rf "$NVIM"
 }
 
 # Print each PATH entry on a separate line
