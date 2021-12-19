@@ -7,6 +7,7 @@ alias ..="cd .."
 # Shortcuts
 alias c="clear"
 alias p="cd ~/Projects"
+alias g="git"
 
 # Always use color output for `ls`
 alias ls="command ls --color"
