@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 
-install_oh_my_zsh() {
-  echo "Install Oh My Zsh."
-
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-}
-
-configure_oh_my_zsh() {
-  echo "Configure Oh My Zsh."
+configure_zsh() {
+  echo "Configure zsh."
 
   rm -rf ~/.zshrc
 
@@ -25,9 +19,8 @@ configure_git() {
 }
 
 main() {
-  install_oh_my_zsh
-  configure_oh_my_zsh
+  configure_zsh
   configure_git
 }
 
-main
+main "$@"

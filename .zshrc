@@ -1,15 +1,6 @@
 export PATH="$PATH":"$HOME"/.local/bin;
 export PATH="$PATH":"$HOME"/nvim-osx64/bin;
 
-export ZSH="${HOME}/.oh-my-zsh"
-
-source $ZSH/oh-my-zsh.sh
-
-plugins=(
-  git
-  golang
-)
-
 # Navigation
 alias ..="cd .."
 
