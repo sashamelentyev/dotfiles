@@ -1,5 +1,6 @@
 # IDEA settings
 .idea
+.idea/
 
 # Visual Studio Code settings
 .vscode/
