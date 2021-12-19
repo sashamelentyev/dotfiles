@@ -3,6 +3,7 @@
 .idea/
 
 # Visual Studio Code settings
+.vscode
 .vscode/
 
 # Binaries for programs and plugins
