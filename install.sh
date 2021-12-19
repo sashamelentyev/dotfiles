@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 
-msg() {
-  echo "-- $*"
-}
-
 install_oh_my_zsh() {
-  msg "Install Oh My ZSH."
+  echo "Install Oh My Zsh."
 
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 configure_oh_my_zsh() {
-  msg "Configure zsh."
+  echo "Configure Oh My Zsh."
 
   rm -rf ~/.zshrc
 
@@ -19,7 +15,7 @@ configure_oh_my_zsh() {
 }
 
 configure_git() {
-  msg "Configure git."
+  echo "Configure git."
 
   rm -rf ~/.gitconfig
   rm -rf ~/.gitignore_global
@@ -34,4 +30,4 @@ main() {
   configure_git
 }
 
-main "$@"
+main
