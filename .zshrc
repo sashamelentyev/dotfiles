@@ -1,13 +1,21 @@
 export PATH="$PATH":"$HOME"/.local/bin;
 export PATH="$PATH":"$HOME"/nvim-osx64/bin;
 
+plugins=(
+   git
+   golang
+)
+
+ZSH_THEME=robbyrussell
+
+source ${HOME}/.oh-my-zsh/oh-my-zsh.sh
+
 # Navigation
 alias ..="cd .."
 
 # Shortcuts
 alias c="clear"
 alias p="cd ~/Projects"
-alias g="git"
 
 # Always use color output for `ls`
 alias ls="command ls --color"
