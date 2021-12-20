@@ -37,9 +37,9 @@ case $MACHINE in
     ln -s "$PWD"/.zshrc ~/.zshrc
 
     rm -rf ~/.gitconfig
-    rm -rf ~/.gitignore_global
-
     ln -s "$PWD"/.gitconfig ~/.gitconfig
+
+    rm -rf ~/.gitignore_global
     ln -s "$PWD"/.gitignore_global ~/.gitignore_global
     ;;
 esac
