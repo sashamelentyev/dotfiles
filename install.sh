@@ -1,26 +1,45 @@
 #!/usr/bin/env bash
 
-configure_zsh() {
-  echo "Configure zsh."
+MACHINE="UNKNOWN"
 
-  rm -rf ~/.zshrc
+case "$(uname -s)" in
+  Linux*)
+    MACHINE=Linux
+    ;;
+  Darwin*)
+    MACHINE=Mac
+    ;;
+esac
 
-  ln -s "$PWD"/.zshrc ~/.zshrc
-}
+case $MACHINE in
+  Mac*)
+    # For Apple Silicon
+    softwareupdate --install-rosetta --agree-to-license
 
-configure_git() {
-  echo "Configure git."
+    xcode-select --install
 
-  rm -rf ~/.gitconfig
-  rm -rf ~/.gitignore_global
+    if ! [ -e /opt/homebrew/bin/brew ]; then
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+      echo "Homebrew already installed"
+    fi
 
-  ln -s "$PWD"/.gitconfig ~/.gitconfig
-  ln -s "$PWD"/.gitignore_global ~/.gitignore_global
-}
+    if ! [ -e ~/.oh-my-zsh ]; then
+      curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh;
+      sed -i "" "/exec zsh -l/d" ohmyzsh.sh
+      sh ohmyzsh.sh
+      rm -rf ohmyzsh.sh
+    else
+      echo "Oh My Zsh already installed"
+    fi
 
-main() {
-  configure_zsh
-  configure_git
-}
+    rm -rf ~/.zshrc
+    ln -s "$PWD"/.zshrc ~/.zshrc
 
-main "$@"
+    rm -rf ~/.gitconfig
+    rm -rf ~/.gitignore_global
+
+    ln -s "$PWD"/.gitconfig ~/.gitconfig
+    ln -s "$PWD"/.gitignore_global ~/.gitignore_global
+    ;;
+esac
