@@ -41,5 +41,8 @@ case $MACHINE in
 
     rm -rf ~/.gitignore_global
     ln -s "$PWD"/.gitignore_global ~/.gitignore_global
+
+    rm -rf ~/.config/nvim/init.vim
+    ln -s "$PWD"/init.vim ~/.config/nvim/init.vim
     ;;
 esac
