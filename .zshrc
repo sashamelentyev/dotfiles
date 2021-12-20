@@ -57,6 +57,7 @@ update(){
 
   curl -LO $PB_REL/download/v"$LAST_PROTOBUF_VERSION"/"$PROTOC";
   unzip -o "$PROTOC" -d "$HOME"/.local;
+  rm -rf "$PROTOC";
 
   NVIM="nvim-macos.tar.gz"
 
