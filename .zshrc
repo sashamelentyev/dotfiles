@@ -6,7 +6,7 @@ plugins=(
    golang
 )
 
-ZSH_THEME=robbyrussell
+ZSH_THEME=agnoster
 
 source ${HOME}/.oh-my-zsh/oh-my-zsh.sh
 
