@@ -44,5 +44,8 @@ case $MACHINE in
 
     rm -rf ~/.config/nvim/init.vim
     ln -s "$PWD"/init.vim ~/.config/nvim/init.vim
+
+    rm -rf ~/.editorconfig
+    ln -s "$PWD"/.editorconfig ~/.editorconfig
     ;;
 esac
