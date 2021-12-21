@@ -71,3 +71,13 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Get week number
 alias week='date +%V'
+
+abc() {
+  abc="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  if [ $# -eq 0 ]; then
+    echo $abc
+    return
+  fi
+
+  echo $abc | sed "s/.*$1//"
+}
