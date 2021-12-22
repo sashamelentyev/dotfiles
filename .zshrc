@@ -26,6 +26,18 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Git
+gcamt(){
+  MESSAGE="($1): ${@:2}"
+  case $1 in
+    feat)
+      gcam "feat$MESSAGE"
+      ;;
+    fix)
+      gcam "fix$MESSAGE"
+      ;;
+  esac
+}
+
 # A new feature
 gcamfeat(){
   MESSAGE="feat($1): ${@:2}"
