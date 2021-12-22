@@ -37,7 +37,8 @@ alias vim="nvim"
 # style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 # test: Adding missing tests or correcting existing tests
 gcamt(){
-  if [ $? -eq 0 || $? -lt 3 ]; then
+  if [[ $# -eq 0 ]]; then
+    echo "11"
     return
   fi
 
@@ -97,4 +98,7 @@ abc() {
 }
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec ${SHELL} -l"
+reload() {
+  c
+  exec ${SHELL} -l
+}
