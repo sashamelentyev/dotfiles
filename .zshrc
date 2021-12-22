@@ -44,6 +44,12 @@ gcamdocs(){
   gcam $MESSAGE
 }
 
+# A commit of the type style formats
+gcamstyle(){
+  MESSAGE="style($1): ${@:2}"
+  gcam $MESSAGE
+}
+
 lint(){
   case $1 in
     go)
