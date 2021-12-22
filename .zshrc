@@ -26,11 +26,13 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Git
+# A commit of the type feat introduces a new feature to the codebase
 gcamfeat(){
   MESSAGE="feat($1): ${@:2}"
   gcam $MESSAGE
 }
 
+# A commit of the type fix patches a bug in your codebase
 gcamfix(){
   MESSAGE="fix($1): ${@:2}"
   gcam $MESSAGE
