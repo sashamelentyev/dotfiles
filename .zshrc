@@ -26,30 +26,31 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Git
-# A commit of the type feat introduces a new feature to the codebase
+# A new feature
 gcamfeat(){
   MESSAGE="feat($1): ${@:2}"
   gcam $MESSAGE
 }
 
-# A commit of the type fix patches a bug in your codebase
+# A bug fix
 gcamfix(){
   MESSAGE="fix($1): ${@:2}"
   gcam $MESSAGE
 }
 
-# A commit of the type docs changes to the documentation
+# Documentation only changes
 gcamdocs(){
   MESSAGE="docs($1): ${@:2}"
   gcam $MESSAGE
 }
 
-# A commit of the type style formats
+# Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 gcamstyle(){
   MESSAGE="style($1): ${@:2}"
   gcam $MESSAGE
 }
 
+# A code change that neither fixes a bug nor adds a feature
 gcamrefactor(){
   MESSAGE="refactor($1): ${@:2}"
   gcam $MESSAGE
