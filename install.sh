@@ -12,6 +12,8 @@ case "$(uname -s)" in
 esac
 
 case $MACHINE in
+  Linux*)
+    ;;
   Mac*)
     # For Apple Silicon
     softwareupdate --install-rosetta --agree-to-license
