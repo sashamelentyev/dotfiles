@@ -38,6 +38,12 @@ gcamfix(){
   gcam $MESSAGE
 }
 
+# A commit of the type docs changes to the documentation
+gcamdocs(){
+  MESSAGE="docs($1): ${@:2}"
+  gcam $MESSAGE
+}
+
 lint(){
   case $1 in
     go)
