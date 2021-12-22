@@ -58,12 +58,6 @@ update(){
   curl -LO $PB_REL/download/v"$LAST_PROTOBUF_VERSION"/"$PROTOC";
   unzip -o "$PROTOC" -d "$HOME"/.local;
   rm -rf "$PROTOC";
-
-  NVIM="nvim-macos.tar.gz"
-
-  curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz;
-  tar xzf "$NVIM";
-  rm -rf "$NVIM";
 }
 
 # Print each PATH entry on a separate line

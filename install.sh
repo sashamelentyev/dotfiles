@@ -44,10 +44,18 @@ case $MACHINE in
     rm -rf ~/.gitignore_global
     ln -s "$PWD"/.gitignore_global ~/.gitignore_global
 
-    rm -rf ~/.config/nvim/init.vim
-    ln -s "$PWD"/init.vim ~/.config/nvim/init.vim
-
     rm -rf ~/.editorconfig
     ln -s "$PWD"/.editorconfig ~/.editorconfig
+
+    if ! [ -e "$HOME"/.local/nvim-osx64/bin ]; then
+      NVIM="nvim-macos.tar.gz"
+
+      curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz;
+      tar xzf "$NVIM" --directory "$HOME"/.local;
+      rm -rf "$NVIM";
+    else
+      echo "Neovim already installed"
+    fi
+
     ;;
 esac
