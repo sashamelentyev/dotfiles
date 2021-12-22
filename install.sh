@@ -35,6 +35,7 @@ case $MACHINE in
       echo "Oh My Zsh already installed"
     fi
 
+    echo "Configure zsh"
     rm -rf ~/.zshrc
     ln -s "$PWD"/.zshrc ~/.zshrc
 
