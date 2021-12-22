@@ -56,6 +56,12 @@ gcamrefactor(){
   gcam $MESSAGE
 }
 
+# Adding missing tests or correcting existing tests
+gcamtest(){
+  MESSAGE="test($1): ${@:2}"
+  gcam $MESSAGE
+}
+
 lint(){
   case $1 in
     go)
