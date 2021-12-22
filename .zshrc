@@ -26,7 +26,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Git
-gcmf(){
+gcamf(){
   MESSAGE="feat($1): ${@:2}"
   git commit -a -m $MESSAGE
 }
