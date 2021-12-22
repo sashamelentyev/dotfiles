@@ -28,50 +28,7 @@ alias vim="nvim"
 # Git
 gcamt(){
   MESSAGE="($2): ${@:3}"
-  case $1 in
-    feat)
-      gcam "feat$MESSAGE"
-      ;;
-    fix)
-      gcam "fix$MESSAGE"
-      ;;
-  esac
-}
-
-# A new feature
-gcamfeat(){
-  MESSAGE="feat($1): ${@:2}"
-  gcam $MESSAGE
-}
-
-# A bug fix
-gcamfix(){
-  MESSAGE="fix($1): ${@:2}"
-  gcam $MESSAGE
-}
-
-# Documentation only changes
-gcamdocs(){
-  MESSAGE="docs($1): ${@:2}"
-  gcam $MESSAGE
-}
-
-# Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-gcamstyle(){
-  MESSAGE="style($1): ${@:2}"
-  gcam $MESSAGE
-}
-
-# A code change that neither fixes a bug nor adds a feature
-gcamrefactor(){
-  MESSAGE="refactor($1): ${@:2}"
-  gcam $MESSAGE
-}
-
-# Adding missing tests or correcting existing tests
-gcamtest(){
-  MESSAGE="test($1): ${@:2}"
-  gcam $MESSAGE
+  gcam "$1$MESSAGE"
 }
 
 lint(){
