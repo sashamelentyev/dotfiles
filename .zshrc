@@ -25,11 +25,10 @@ export EDITOR="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
-# Git
-# Type
-# Must be one of the following:
-# build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-# ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+# git commit -a -m type(package): message
+# Type must be one of the following:
+# build: Changes that affect the build system or external dependencies
+# ci: Changes to our CI configuration files and scripts
 # docs: Documentation only changes
 # feat: A new feature
 # fix: A bug fix
