@@ -98,6 +98,6 @@ abc() {
 
 # Reload the shell (i.e. invoke as a login shell)
 reload() {
-  c
+  clear
   exec ${SHELL} -l
 }
