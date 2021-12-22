@@ -31,6 +31,11 @@ gcamfeat(){
   git commit -a -m $MESSAGE
 }
 
+gcamfix(){
+  MESSAGE="fix($1): ${@:2}"
+  git commit -a -m $MESSAGE
+}
+
 lint(){
   case $1 in
     go)
