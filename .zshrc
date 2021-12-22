@@ -50,6 +50,11 @@ gcamstyle(){
   gcam $MESSAGE
 }
 
+gcamrefactor(){
+  MESSAGE="refactor($1): ${@:2}"
+  gcam $MESSAGE
+}
+
 lint(){
   case $1 in
     go)
