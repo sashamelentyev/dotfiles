@@ -47,11 +47,11 @@ case $MACHINE in
     rm -rf ~/.editorconfig
     ln -s "$PWD"/.editorconfig ~/.editorconfig
 
-    if ! [ -e "$HOME"/.local/nvim-osx64/bin ]; then
+    if ! [ -e "$HOME"/nvim-osx64/bin ]; then
       NVIM="nvim-macos.tar.gz"
 
       curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz;
-      tar xzf "$NVIM" --directory "$HOME"/.local;
+      tar xzf "$NVIM" --directory "$HOME";
       rm -rf "$NVIM";
     else
       echo "Neovim already installed"
