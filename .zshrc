@@ -25,6 +25,11 @@ export EDITOR="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
+# Git
+gcamf(){
+  git commit -a -m 'feat($1): ${@:2}'
+}
+
 lint(){
   case $1 in
     go)
