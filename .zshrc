@@ -27,7 +27,7 @@ alias vim="nvim"
 
 # Git
 gcamt(){
-  MESSAGE="($1): ${@:2}"
+  MESSAGE="($2): ${@:3}"
   case $1 in
     feat)
       gcam "feat$MESSAGE"
