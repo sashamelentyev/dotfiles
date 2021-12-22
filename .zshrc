@@ -37,8 +37,7 @@ alias vim="nvim"
 # style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 # test: Adding missing tests or correcting existing tests
 gcamt(){
-  if [[ $# -eq 0 ]]; then
-    echo "11"
+  if [[ $# -lt 3 ]]; then
     return
   fi
 
