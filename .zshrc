@@ -33,7 +33,7 @@ gcamfeat(){
 
 gcamfix(){
   MESSAGE="fix($1): ${@:2}"
-  git commit -a -m $MESSAGE
+  gcam $MESSAGE
 }
 
 lint(){
