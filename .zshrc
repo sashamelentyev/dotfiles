@@ -27,8 +27,7 @@ alias vim="nvim"
 
 # Git
 gcmf(){
-  echo "feat(  $1  ): ${@:2}"
-  git commit -m "feat(  $1  ): ${@:2}"
+  git commit -a -m 'feat("$1"): "${@:2}"'
 }
 
 lint(){
