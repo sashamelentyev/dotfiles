@@ -37,6 +37,9 @@ alias vim="nvim"
 # style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 # test: Adding missing tests or correcting existing tests
 gcamt(){
+  if [ $? -eq 0 ]; then
+    echo "oops"
+  fi
   MESSAGE="($2): ${@:3}"
   gcam "$1$MESSAGE"
 }
