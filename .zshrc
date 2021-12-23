@@ -25,20 +25,25 @@ export EDITOR="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
-# git commit -a -m type(package): message
-# Type must be one of the following:
-# build: Changes that affect the build system or external dependencies
-# ci: Changes to our CI configuration files and scripts
-# docs: Documentation only changes
-# feat: A new feature
-# fix: A bug fix
-# perf: A code change that improves performance
-# refactor: A code change that neither fixes a bug nor adds a feature
-# style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-# test: Adding missing tests or correcting existing tests
 gcamt(){
-  if [[ $# -lt 3 ]]; then
+  if [ $# -lt 3 ]; then
+    echo "usage: gcamt [type] [package] [message...]"
+    echo "Type must be one of the following:"
+    echo "build: Changes that affect the build system or external dependencies"
+    echo "ci: Changes to our CI configuration files and scripts"
+    echo "docs: Documentation only changes"
+    echo "feat: A new feature"
+    echo "fix: A bug fix"
+    echo "perf: A code change that improves performance"
+    echo "refactor: A code change that neither fixes a bug nor adds a feature"
+    echo "style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"
+    echo "test: Adding missing tests or correcting existing tests"
     return
+  fi
+
+  if ! [[ $1 -eq "build" || $1 -eq "ci" || $1 -eq "docs" || $1 -eq "feat" || $1 -eq "fix" || $1 -eq "perf" || $1 -eq "refactor" || $1 -eq "style"  || $1 -eq "test" ]]; then
+      echo "Unknown type"
+      return
   fi
 
   MESSAGE="($2): ${@:3}"
