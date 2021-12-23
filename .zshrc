@@ -101,3 +101,6 @@ reload() {
   clear
   exec ${SHELL} -l
 }
+
+# Buf
+alias bg="buf generate"
