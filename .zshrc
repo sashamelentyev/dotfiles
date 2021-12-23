@@ -41,11 +41,6 @@ gcamt(){
     return
   fi
 
-  if ! [[ $1 -eq "build" || $1 -eq "ci" || $1 -eq "docs" || $1 -eq "feat" || $1 -eq "fix" || $1 -eq "perf" || $1 -eq "refactor" || $1 -eq "style"  || $1 -eq "test" ]]; then
-      echo "Unknown type"
-      return
-  fi
-
   MESSAGE="($2): ${@:3}"
   gcam "$1$MESSAGE"
 }
