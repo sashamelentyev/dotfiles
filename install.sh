@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-MACHINE="UNKNOWN"
+MACHINE="Unknown"
 
 case "$(uname -s)" in
   Linux*)
