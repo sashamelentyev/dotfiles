@@ -57,6 +57,5 @@ case $MACHINE in
     else
       echo "Neovim already installed"
     fi
-
     ;;
 esac
