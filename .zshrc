@@ -54,7 +54,7 @@ lint(){
       yamllint $2
       ;;
     *)
-      echo ""
+      echo "Unknown lint"
       ;;
   esac
 }
