@@ -50,9 +50,6 @@ lint(){
     go)
       golangci-lint run
       ;;
-    yaml)
-      yamllint $2
-      ;;
     *)
       echo "Unknown lint"
       ;;
