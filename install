@@ -15,7 +15,7 @@ case $MACHINE in
   Linux*)
     ;;
   Mac*)
-    sh ./macos/settings.sh
+    sh ./macos/install.sh
 
     if ! [ -e ~/.oh-my-zsh ]; then
       curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh;
