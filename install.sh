@@ -50,3 +50,5 @@ case $MACHINE in
     fi
     ;;
 esac
+
+go install golang.org/x/tools/...@latest
