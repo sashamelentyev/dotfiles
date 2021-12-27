@@ -17,11 +17,6 @@ case $MACHINE in
   Mac*)
     sh ./macos/settings.sh
 
-    # For Apple Silicon
-    softwareupdate --install-rosetta --agree-to-license
-
-    xcode-select --install
-
     if ! [ -e ~/.oh-my-zsh ]; then
       curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh;
       sed -i "" "/exec zsh -l/d" ohmyzsh.sh
