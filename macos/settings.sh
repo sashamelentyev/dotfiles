@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/zsh
 
 sudo -v
 
