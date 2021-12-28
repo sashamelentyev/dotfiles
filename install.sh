@@ -52,3 +52,7 @@ case $MACHINE in
 esac
 
 go install golang.org/x/tools/...@latest
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+go install entgo.io/ent/cmd/ent@latest
+go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
+go install github.com/bufbuild/buf/cmd/buf@latest
