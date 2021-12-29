@@ -31,5 +31,5 @@ node_modules/
 *.tar
 *.zip
 
-# swagger-codegen files
+# Go files after sed
 *.go-e
