@@ -51,7 +51,7 @@ lint(){
       golangci-lint run
       ;;
     *)
-      echo "Unknown lint"
+      echo "Unknown lint $1"
       ;;
   esac
 }
