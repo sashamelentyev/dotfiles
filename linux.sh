@@ -3,4 +3,4 @@
 sudo apt update
 sudo apt install snapd
 
-sudo snap install neovim
+sudo snap install nvim --classic
