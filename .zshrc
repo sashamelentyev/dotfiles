@@ -1,5 +1,4 @@
 export PATH="$PATH":"$HOME"/.local/bin;
-export PATH="$PATH":"$HOME"/nvim-osx64/bin;
 
 plugins=(
    git
