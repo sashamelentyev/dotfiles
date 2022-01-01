@@ -12,7 +12,9 @@ Darwin*)
 esac
 
 case $MACHINE in
-Linux*) ;;
+Linux*)
+  sh ./linux.sh
+  ;;
 Mac*)
   sh ./macos.sh
   ;;
