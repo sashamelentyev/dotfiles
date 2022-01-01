@@ -1,5 +1,21 @@
 #!/bin/zsh
 
+# For Apple Silicon
+softwareupdate --install-rosetta --agree-to-license
+
+# XCode command-line tools
+xcode-select --install
+
+if ! [ -e /opt/homebrew/bin/brew ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew update --verbose
+
+brew install neovim
+
 scutil --set HostName "localhost"
 
 defaults write com.apple.dock autohide -bool true
