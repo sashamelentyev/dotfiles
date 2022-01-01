@@ -62,11 +62,6 @@ update(){
   go install golang.org/dl/"$LAST_GOLANG_VERSION"@latest;
   $LAST_GOLANG_VERSION download;
 
-  sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest;
-  go install entgo.io/ent/cmd/ent@latest;
-  go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest;
-  go install github.com/bufbuild/buf/cmd/buf@latest;
-
   PB_REL="https://github.com/protocolbuffers/protobuf/releases"
   LAST_PROTOBUF_VERSION=$(git ls-remote --tags --sort="v:refname" git://github.com/protocolbuffers/protobuf.git | tail -n1 | sed "s/.*\/v//")
   OS="osx"
