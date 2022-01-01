@@ -3,52 +3,52 @@
 MACHINE="Unknown"
 
 case "$(uname -s)" in
-  Linux*)
-    MACHINE=Linux
-    ;;
-  Darwin*)
-    MACHINE=Mac
-    ;;
+Linux*)
+  MACHINE=Linux
+  ;;
+Darwin*)
+  MACHINE=Mac
+  ;;
 esac
 
 case $MACHINE in
-  Linux*)
-    ;;
-  Mac*)
-    sh ./macos.sh
+Linux*) ;;
 
-    if ! [ -e ~/.oh-my-zsh ]; then
-      curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh;
-      sed -i "" "/exec zsh -l/d" ohmyzsh.sh
-      sh ohmyzsh.sh
-      rm -rf ohmyzsh.sh
-    else
-      echo "Oh My Zsh already installed"
-    fi
+Mac*)
+  sh ./macos.sh
 
-    echo "Configure zsh"
-    rm -rf ~/.zshrc
-    ln -s "$PWD"/.zshrc ~/.zshrc
+  if ! [ -e ~/.oh-my-zsh ]; then
+    curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    sed -i "" "/exec zsh -l/d" ohmyzsh.sh
+    sh ohmyzsh.sh
+    rm -rf ohmyzsh.sh
+  else
+    echo "Oh My Zsh already installed"
+  fi
 
-    rm -rf ~/.gitconfig
-    ln -s "$PWD"/.gitconfig ~/.gitconfig
+  echo "Configure zsh"
+  rm -rf ~/.zshrc
+  ln -s "$PWD"/.zshrc ~/.zshrc
 
-    rm -rf ~/.gitignore_global
-    ln -s "$PWD"/.gitignore_global ~/.gitignore_global
+  rm -rf ~/.gitconfig
+  ln -s "$PWD"/.gitconfig ~/.gitconfig
 
-    rm -rf ~/.editorconfig
-    ln -s "$PWD"/.editorconfig ~/.editorconfig
+  rm -rf ~/.gitignore_global
+  ln -s "$PWD"/.gitignore_global ~/.gitignore_global
 
-    if ! [ -e "$HOME"/nvim-osx64/bin ]; then
-      NVIM="nvim-macos.tar.gz"
+  rm -rf ~/.editorconfig
+  ln -s "$PWD"/.editorconfig ~/.editorconfig
 
-      curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz;
-      tar xzf "$NVIM" --directory "$HOME";
-      rm -rf "$NVIM";
-    else
-      echo "Neovim already installed"
-    fi
-    ;;
+  if ! [ -e "$HOME"/nvim-osx64/bin ]; then
+    NVIM="nvim-macos.tar.gz"
+
+    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz
+    tar xzf "$NVIM" --directory "$HOME"
+    rm -rf "$NVIM"
+  else
+    echo "Neovim already installed"
+  fi
+  ;;
 esac
 
 go install golang.org/x/tools/...@latest
@@ -57,3 +57,4 @@ go install entgo.io/ent/cmd/ent@latest
 go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
 go install github.com/bufbuild/buf/cmd/buf@latest
 go install github.com/go-dummy/dummy/cmd/dummy
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
