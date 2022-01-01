@@ -14,6 +14,7 @@ fi
 brew update --verbose
 
 brew install neovim
+brew install golang
 
 scutil --set HostName "localhost"
 
