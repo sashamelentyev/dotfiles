@@ -16,7 +16,6 @@ brew update --verbose
 brew install neovim
 brew install golang
 brew install --cask telegram
-brew install --cask yandex
 
 scutil --set HostName "localhost"
 
