@@ -40,8 +40,10 @@ gcamt(){
     return
   fi
 
-  MESSAGE="($2): ${@:3}"
-  gcam "$1$MESSAGE"
+  TYPE="$1"
+  PACKAGE="$2"
+  MESSAGE="${@:3}"
+  gcam "$TYPE($PACKAGE): $MESSAGE"
 }
 
 lint(){
