@@ -1,21 +1,10 @@
 #!/usr/bin/env sh
 
-MACHINE=Unknown
-
 case "$(uname -s)" in
-Linux*)
-  MACHINE=Linux
-  ;;
-Darwin*)
-  MACHINE=Mac
-  ;;
-esac
-
-case $MACHINE in
 Linux*)
   sh ./linux.sh
   ;;
-Mac*)
+Darwin*)
   sh ./macos.sh
   ;;
 esac
