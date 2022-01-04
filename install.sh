@@ -35,7 +35,8 @@ rm -rf ~/.config/nvim/init.vim
 ln -s "$PWD"/init.vim ~/.config/nvim/init.vim
 
 # Vim Plugin Manager
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs '\
+      'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 sudo go install golang.org/x/tools/...@latest
 sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
