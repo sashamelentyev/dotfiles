@@ -1,8 +1,8 @@
-export PATH="$PATH":"$HOME"/.local/bin;
+export PATH="$PATH":"$HOME"/.local/bin
 
 plugins=(
-   git
-   golang
+  git
+  golang
 )
 
 ZSH_THEME=robbyrussell
@@ -24,7 +24,7 @@ export EDITOR="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
-gcamt(){
+gcamt() {
   if [ $# -lt 3 ]; then
     echo "usage: gcamt [type] [package] [message...]"
     echo "Type must be one of the following:"
@@ -46,22 +46,22 @@ gcamt(){
   gcam "$TYPE($PACKAGE): $MESSAGE"
 }
 
-lint(){
+lint() {
   case $1 in
-    go)
-      golangci-lint run
-      ;;
-    *)
-      echo "Unknown lint $1"
-      ;;
+  go)
+    golangci-lint run
+    ;;
+  *)
+    echo "Unknown lint $1"
+    ;;
   esac
 }
 
-update(){
+update() {
   LAST_GOLANG_VERSION=$(git ls-remote --tags --sort="v:refname" git://github.com/golang/go.git | grep "go" | grep -v "rc" | grep -v "beta" | tail -n1 | sed "s/.*\///")
 
-  go install golang.org/dl/"$LAST_GOLANG_VERSION"@latest;
-  $LAST_GOLANG_VERSION download;
+  go install golang.org/dl/"$LAST_GOLANG_VERSION"@latest
+  $LAST_GOLANG_VERSION download
 
   PB_REL="https://github.com/protocolbuffers/protobuf/releases"
   LAST_PROTOBUF_VERSION=$(git ls-remote --tags --sort="v:refname" git://github.com/protocolbuffers/protobuf.git | tail -n1 | sed "s/.*\/v//")
@@ -69,9 +69,9 @@ update(){
   ARCH="x86_64"
   PROTOC="protoc-$LAST_PROTOBUF_VERSION-$OS-$ARCH.zip"
 
-  curl -LO $PB_REL/download/v"$LAST_PROTOBUF_VERSION"/"$PROTOC";
-  unzip -o "$PROTOC" -d "$HOME"/.local;
-  rm -rf "$PROTOC";
+  curl -LO $PB_REL/download/v"$LAST_PROTOBUF_VERSION"/"$PROTOC"
+  unzip -o "$PROTOC" -d "$HOME"/.local
+  rm -rf "$PROTOC"
 }
 
 # Print each PATH entry on a separate line
