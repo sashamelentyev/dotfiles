@@ -21,7 +21,7 @@ brew install golang
 brew install --cask telegram
 brew install --cask slack
 brew install tmux
-brew install --cask zoomus
+brew install zoom
 
 scutil --set HostName "localhost"
 
