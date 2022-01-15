@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+if [ "$(uname -s)" != "Darwin" ]; then
+  exit 0
+fi
+
 if ! [ -e ~/.ssh/id_rsa.pub ]; then
   ssh-keygen -t ed25519 -f "$HOME/.ssh/id_rsa" -C "sasha@melentyev.io"
 fi
