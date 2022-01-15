@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+if [ "$(uname -s)" != "Linux" ]; then
+  exit 0
+fi
+
 sudo apt update
 sudo apt upgrade
 
