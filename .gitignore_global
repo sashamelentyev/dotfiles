@@ -33,3 +33,7 @@ node_modules/
 
 # Go files after sed
 *.go-e
+
+# Rust
+Cargo.lock
+*.rs.bk
