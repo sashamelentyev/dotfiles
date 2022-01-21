@@ -9,8 +9,6 @@ Darwin*)
   ;;
 esac
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 if ! [ -e ~/.oh-my-zsh ]; then
   curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
   sed -i "" "/exec zsh -l/d" ohmyzsh.sh
