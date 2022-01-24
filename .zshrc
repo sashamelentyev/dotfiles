@@ -14,6 +14,7 @@ alias ..="cd .."
 
 # Shortcuts
 alias c="clear"
+alias с="clear"
 alias p="cd ~/Projects"
 
 # Always use color output for `ls`
