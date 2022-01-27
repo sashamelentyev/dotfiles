@@ -26,6 +26,7 @@ brew install --cask telegram
 brew install --cask slack
 brew install tmux
 brew install zoom
+brew install --cask obs
 
 scutil --set HostName "localhost"
 

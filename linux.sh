@@ -15,3 +15,4 @@ sudo snap install telegram-desktop
 sudo snap install slack --classic
 sudo snap install tmux --classic
 sudo snap install zoom-client
+sudo snap install obs-studio
