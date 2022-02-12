@@ -3,4 +3,3 @@
 	email = sasha@melentyev.io
 [core]
 	excludesFile = ~/.gitignore_global
-
