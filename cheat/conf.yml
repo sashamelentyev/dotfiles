@@ -1,3 +1,5 @@
+colorize: true
+style: monokai
 cheatpaths:
   - name: cheat
     path: ~/Projects/dotfiles/cheat
