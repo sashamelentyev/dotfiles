@@ -46,4 +46,4 @@ go install github.com/bufbuild/buf/cmd/buf@latest
 go install github.com/go-dummy/dummy/cmd/dummy@latest
 sudo go install mvdan.cc/sh/v3/cmd/shfmt@latest
 go install github.com/thepudds/fzgen/cmd/fzgen@latest
-go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
+go install github.com/cheat/cheat/cmd/cheat@latest
