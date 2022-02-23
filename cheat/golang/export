@@ -10,3 +10,18 @@ tags:
 // pizza and pi do not start with a capital letter, so they are not exported.
 
 // When importing a package, you can refer only to its exported names. Any "unexported" names are not accessible from outside the package.
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	fmt.Println(math.pi)
+}
+
+// Run the code. Notice the error message.
+
+// To fix the error, rename math.pi to math.Pi and try it again.
