@@ -1,6 +1,0 @@
-colorize: true
-style: monokai
-formatter: terminal256
-cheatpaths:
-  - name: cheat
-    path: ~/Projects/dotfiles/cheat
