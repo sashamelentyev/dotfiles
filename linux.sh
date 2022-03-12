@@ -7,6 +7,8 @@ fi
 sudo apt update
 sudo apt upgrade
 
+sudo apt install zsh
+
 sudo apt install snapd
 
 sudo snap install nvim --classic
