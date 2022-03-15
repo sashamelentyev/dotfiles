@@ -28,11 +28,8 @@ ln -s "$PWD"/.gitignore_global ~/.gitignore_global
 rm -rf ~/.editorconfig
 ln -s "$PWD"/.editorconfig ~/.editorconfig
 
-if ! [ -e ~/.config/nvim ]; then
-  mkdir -p ~/.config/nvim
-fi
-rm -rf ~/.config/nvim/init.vim
-ln -s "$PWD"/init.vim ~/.config/nvim/init.vim
+rm -rf ~/.config/nvim
+ln -s "$PWD"/nvim ~/.config
 
 sudo go install golang.org/x/tools/...@latest
 sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
