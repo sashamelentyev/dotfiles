@@ -33,9 +33,9 @@ ln -s "$PWD"/nvim ~/.config
 
 sudo go install golang.org/x/tools/...@latest
 sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-go install entgo.io/ent/cmd/ent@latest
-go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
-go install github.com/bufbuild/buf/cmd/buf@latest
-go install github.com/go-dummy/dummy/cmd/dummy@latest
+sudo go install entgo.io/ent/cmd/ent@latest
+sudo go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
+sudo go install github.com/bufbuild/buf/cmd/buf@latest
+sudo go install github.com/go-dummy/dummy/cmd/dummy@latest
 sudo go install mvdan.cc/sh/v3/cmd/shfmt@latest
-go install github.com/thepudds/fzgen/cmd/fzgen@latest
+sudo go install github.com/thepudds/fzgen/cmd/fzgen@latest
