@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-if [ "$(uname -s)" != "Darwin" ]; then
-  exit 0
-fi
-
 sudo -v
 
 if ! [ -e ~/.ssh/id_rsa.pub ]; then

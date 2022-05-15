@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 
 case "$(uname -s)" in
-Linux*)
-  sh ./linux.sh
-  ;;
 Darwin*)
   sh ./macos.sh
   ;;
