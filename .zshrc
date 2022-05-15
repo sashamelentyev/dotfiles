@@ -92,9 +92,6 @@ reload() {
 	exec ${SHELL} -l
 }
 
-# Buf
-alias bg="buf generate"
-
 # Formats shell programs. See canonical.sh for a quick look at its default style
 alias shfmt="command shfmt -l -w"
 
