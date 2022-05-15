@@ -1,5 +1,4 @@
 export PATH="$PATH":"$HOME"/.local/bin
-export CHEAT_CONFIG_PATH=~/Projects/dotfiles/cheat/conf.yml
 
 plugins=(
 	git
