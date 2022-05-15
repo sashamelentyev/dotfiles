@@ -22,7 +22,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew update --verbose
 
-brew install neovim
 brew install golang
 brew install --cask telegram
 brew install --cask slack
