@@ -23,6 +23,7 @@ brew install --cask telegram
 brew install --cask slack
 brew install zoom
 brew install --cask obs
+brew install graphviz
 
 scutil --set HostName "localhost"
 
