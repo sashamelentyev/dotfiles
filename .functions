@@ -1,0 +1,19 @@
+reload() {
+  c
+  exec ${SHELL} -l
+}
+
+mkd() {
+  mkdir -p "$@" && cd "$@"
+}
+
+lint() {
+  case "$1" in
+    go)
+      golangci-lint run
+      ;;
+    *)
+      echo "Lint not found" >&2
+      exit 1
+  esac
+}

@@ -1,33 +1,40 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-case "$(uname -s)" in
-Darwin*)
-  sh ./macos.sh
-  ;;
-esac
+dotfiles_repo_dir=$(pwd)
+dotfiles_home_dir=(.aliases .editorconfig .functions .gitconfig .gitignore_global .zshrc)
 
-if ! [ -e ~/.oh-my-zsh ]; then
-  curl -Lo ohmyzsh.sh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-  sed -i "" "/exec zsh -l/d" ohmyzsh.sh
-  sh ohmyzsh.sh
-  rm -rf ohmyzsh.sh
-fi
+usage() {
+  local program_name
+  program_name=${0##*/}
+  cat <<EOF
+Usage: $program_name [-option]
+Options:
+    --help    Print this message
+    -i        Install all config
+EOF
+}
 
-rm -rf ~/.zshrc
-ln -s "$PWD"/.zshrc ~/.zshrc
+install_dotfiles() {
+  for dotfile in "${dotfiles_home_dir[@]}"
+  do
+    env rm -rf "$HOME/${dotfile}"
+    env ln -fs "$dotfiles_repo_dir/${dotfile}" "$HOME/"
+  done
+}
 
-rm -rf ~/.gitconfig
-ln -s "$PWD"/.gitconfig ~/.gitconfig
+main() {
+  case "$1" in
+    ''|-h|--help)
+      usage
+      exit 0
+      ;;
+    -i)
+      install_dotfiles
+      ;;
+    *)
+      echo "Command not found" >&2
+      exit 1
+  esac
+}
 
-rm -rf ~/.gitignore_global
-ln -s "$PWD"/.gitignore_global ~/.gitignore_global
-
-rm -rf ~/.editorconfig
-ln -s "$PWD"/.editorconfig ~/.editorconfig
-
-sudo go install golang.org/x/tools/...@latest
-sudo go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-sudo go install entgo.io/ent/cmd/ent@latest
-sudo go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
-sudo go install mvdan.cc/sh/v3/cmd/shfmt@latest
-sudo go install github.com/thepudds/fzgen/cmd/fzgen@latest
+main "$@"
