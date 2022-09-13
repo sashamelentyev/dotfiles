@@ -8,7 +8,7 @@ alias l='ls -l'
 alias la='ls -lA'
 
 # Shortcuts
-alias c="clear"
-alias с="clear"
+alias c='clear'
+alias с='clear'
 alias path='echo -e ${PATH//:/\\n}'
 alias week='date +%V'
