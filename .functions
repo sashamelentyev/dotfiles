@@ -1,5 +1,5 @@
 reload() {
-  c
+  clear
   exec ${SHELL} -l
 }
 
