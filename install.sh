@@ -9,7 +9,7 @@ usage() {
   cat <<EOF
 Usage: $program_name [-option]
 Options:
-    --help    Print this message
+    --help
     -i        Install all config
 EOF
 }
