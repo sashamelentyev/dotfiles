@@ -11,7 +11,6 @@ Usage: $program_name [-option]
 Options:
     --help
     -i     Install dotfiles
-    -m     Install macOS settings
 EOF
 }
 
@@ -23,24 +22,6 @@ install_dotfiles() {
   done
 }
 
-macOS() {
-  # For Apple Silicon
-  softwareupdate --install-rosetta --agree-to-license
-
-  # XCode command-line tools
-  xcode-select --install
-
-  if ! [ -e /opt/homebrew/bin/brew ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-  fi
-
-  brew update
-
-  brew install neovim
-  brew install golangci-lint
-}
-
 main() {
   case "$1" in
     ''|-h|--help)
@@ -49,9 +30,6 @@ main() {
       ;;
     -i)
       install_dotfiles
-      ;;
-    ''|-m|--macos)
-      macOS
       ;;
     *)
       echo "Command not found" >&2
