@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-dotfiles_repo_dir=$(pwd)
-dotfiles_home_dir=(.aliases .editorconfig .functions .gitconfig .gitignore_global .zshrc)
-
 usage() {
   local program_name
   program_name=${0##*/}
@@ -15,6 +12,9 @@ EOF
 }
 
 install_dotfiles() {
+  dotfiles_repo_dir=$(pwd)
+  dotfiles_home_dir=(.aliases .editorconfig .functions .gitconfig .gitignore_global .zshrc)
+
   for dotfile in "${dotfiles_home_dir[@]}"
   do
     env rm -rf "$HOME/${dotfile}"
