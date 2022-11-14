@@ -1,6 +1,7 @@
 [alias]
     a = add
     aa = add -A
+    c = commit --signoff
     co = checkout
     contributors = shortlog -nse
 
