@@ -11,7 +11,7 @@ Options:
 EOF
 }
 
-install_dotfiles() {
+install() {
   dotfiles_repo_dir=$(pwd)
   dotfiles_home_dir=(.aliases .editorconfig .functions .gitconfig .gitignore_global .zshrc .vimrc)
 
@@ -29,7 +29,7 @@ main() {
       exit 0
       ;;
     -i)
-      install_dotfiles
+      install
       ;;
     *)
       echo "Command not found" >&2
