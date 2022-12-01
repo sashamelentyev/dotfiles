@@ -33,3 +33,6 @@ node_modules/
 
 # Go files after sed
 *.go-e
+
+# Vi
+*.swp
