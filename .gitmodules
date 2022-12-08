@@ -1,6 +1,6 @@
 [submodule ".vim/pack/plugins/start/rust.vim"]
 	path = .vim/pack/plugins/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
 [submodule "ozontech"]
 	path = ozontech
-	url = https://github.com/sashamelentyev/dotfiles-ozontech
+	url = git@github.com:sashamelentyev/dotfiles-ozontech.git
