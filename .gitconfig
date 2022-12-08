@@ -11,3 +11,6 @@
 [user]
 	name = Sasha Melentyev
 	email = sasha@melentyev.io
+
+[url "https://github.com/"]
+    insteadOf = ssh://git@github.com
