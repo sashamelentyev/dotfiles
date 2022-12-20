@@ -12,3 +12,7 @@ alias c='clear'
 alias с='clear'
 alias path='echo -e ${PATH//:/\\n}'
 alias week='date +%V'
+
+# Vim
+alias vi='nvim'
+alias vim='nvim'
