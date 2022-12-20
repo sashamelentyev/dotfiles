@@ -4,3 +4,6 @@
 [submodule "ozontech"]
 	path = ozontech
 	url = git@github.com:sashamelentyev/dotfiles-ozontech.git
+[submodule "kickstart.nvim"]
+	path = kickstart.nvim
+	url = git@github.com:nvim-lua/kickstart.nvim.git
