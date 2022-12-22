@@ -4,6 +4,7 @@
     c = commit --signoff
     co = checkout
     contributors = shortlog -nse
+    sm = submodule
 
 [core]
 	excludesFile = ~/.gitignore_global
