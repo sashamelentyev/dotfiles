@@ -39,3 +39,6 @@ node_modules/
 
 # Postgres
 .pgpass
+
+# HTTP request log
+*-log.http
