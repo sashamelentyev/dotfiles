@@ -15,7 +15,7 @@ EOF
 
 install() {
   dotfiles_repo_dir=$(pwd)
-  dotfiles_home_dir=(.aliases .editorconfig .functions .gitconfig .gitignore_global .zshrc .vimrc)
+  dotfiles_home_dir=(.gitconfig .gitignore_global .zshrc)
 
   for dotfile in "${dotfiles_home_dir[@]}"
   do

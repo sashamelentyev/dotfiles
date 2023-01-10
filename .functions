@@ -1,8 +1,0 @@
-reload() {
-  clear
-  exec ${SHELL} -l
-}
-
-mkd() {
-  mkdir -p "$@" && cd "$@"
-}
