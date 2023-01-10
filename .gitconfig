@@ -1,3 +1,19 @@
+[user]
+	name = Sasha Melentyev
+	email = sasha@melentyev.io
+
+[core]
+	excludesFile = ~/.gitignore_global
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[rebase]
+	autosquash = true
+
 [alias]
     a = add
     aa = add -A
@@ -5,13 +21,6 @@
     co = checkout
     contributors = shortlog -nse
     sm = submodule
-
-[core]
-	excludesFile = ~/.gitignore_global
-
-[user]
-	name = Sasha Melentyev
-	email = sasha@melentyev.io
 
 [url "https://github.com/"]
     insteadOf = ssh://git@github.com
