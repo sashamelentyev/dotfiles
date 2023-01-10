@@ -4,6 +4,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export LANG=en_US.UTF-8
 export TERM=screen-256color
 export EDITOR=nvim
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
 
 alias dl='cd ~/Downloads && la'
 alias doc='cd ~/Documents && la'
