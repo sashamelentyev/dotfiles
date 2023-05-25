@@ -24,6 +24,10 @@ reload() {
   exec ${SHELL} -l
 }
 
+mk() {
+  make "$@"
+}
+
 mkd() {
   mkdir -p "$@" && cd "$@"
 }
