@@ -1,1 +1,0 @@
-../../kickstart.nvim/init.lua

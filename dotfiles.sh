@@ -22,8 +22,6 @@ install() {
     env rm -rf "$HOME/${dotfile}"
     env ln -fs "$dotfiles_repo_dir/${dotfile}" "$HOME/"
   done
-  
-  env ln -fs "$dotfiles_repo_dir/.config/nvim/init.lua" "$HOME/.config/nvim/init.lua"
 }
 
 main() {
