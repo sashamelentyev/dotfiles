@@ -1,6 +1,6 @@
 [user]
 	name = Sasha Melentyev
-	email = sasha@melentyev.io
+	email = sasha@m8.ru
 
 [core]
 	excludesFile = ~/.gitignore_global

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 set -eou pipefail
 
@@ -6,16 +6,15 @@ usage() {
   local program_name
   program_name=${0##*/}
   cat <<EOF
-Usage: $program_name [-option]
-Options:
-    --help
-    -i     Install dotfiles
+Usage: $program_name [-h, --help]
+Commands:
+    install    Install dotfiles
 EOF
 }
 
 install() {
   dotfiles_repo_dir=$(pwd)
-  dotfiles_home_dir=(.gitconfig .gitignore_global .zshrc)
+  dotfiles_home_dir=(.gitconfig .gitignore_global .zshrc .config)
 
   for dotfile in "${dotfiles_home_dir[@]}"
   do
@@ -30,7 +29,7 @@ main() {
       usage
       exit 0
       ;;
-    -i)
+    install)
       install
       ;;
     *)
