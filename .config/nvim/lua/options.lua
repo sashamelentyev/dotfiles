@@ -1,7 +1,7 @@
 local options = {
     number = true,
     relativenumber = false,
-    ruler = false,
+    ruler = true,
 }
 
 for k, v in pairs(options) do
