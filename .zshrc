@@ -1,5 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export PATH="$PATH:$(go env GOPATH)/bin"
 export LANG=en_US.UTF-8
 export TERM=screen-256color
 export EDITOR=nvim
