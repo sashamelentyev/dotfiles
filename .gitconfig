@@ -1,10 +1,3 @@
-[user]
-	name = Sasha Melentyev
-	email = sasha@m8.ru
-
-[core]
-	excludesFile = ~/.gitignore_global
-
 [init]
 	defaultBranch = main
 
@@ -14,13 +7,11 @@
 [rebase]
 	autosquash = true
 
-[alias]
-    a = add
-    aa = add -A
-    c = commit --signoff
-    co = checkout
-    contributors = shortlog -nse
-    sm = submodule
+[url "ssh://git@gitlab.stageoffice.ru/"]
+    insteadOf = https://gitlab.stageoffice.ru/
 
-[url "https://github.com/"]
-    insteadOf = ssh://git@github.com
+[includeIf "gitdir:/Users/sashamelentyev/Repositories/github.com/"]
+  path = .gitconfig-github
+
+[includeIf "gitdir:/Users/sashamelentyev/go/src/gitlab.stageoffice.ru/"]
+  path = .gitconfig-ncloudtech

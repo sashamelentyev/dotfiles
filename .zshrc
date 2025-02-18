@@ -1,11 +1,18 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export GOPRIVATE=gitlab.stageoffice.ru
+
 export LANG=en_US.UTF-8
 export TERM=screen-256color
 export EDITOR=nvim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
+# ignore duplicate command in history
+export HISTCONTROL=ignoredups
 
 alias dl='cd ~/Downloads && la'
 alias doc='cd ~/Documents && la'

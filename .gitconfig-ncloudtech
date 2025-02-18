@@ -1,0 +1,25 @@
+[core]
+	excludesFile = ~/.gitignore_global
+
+[user]
+	name = Sasha Melentyev
+	email = aleksandr.melentyev@myoffice.team
+
+[alias]
+    a = add
+    aa = add -A
+    c = commit
+    co = checkout
+    contributors = shortlog -nse
+    sm = submodule
+
+    cmtfix = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | fix: $1\"; }; f"
+    cmtfeat = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | feat: $1\"; }; f"
+    cmtbuild = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | build: $1\"; }; f"
+    cmtchore = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | chore: $1\"; }; f"
+    cmtci = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | ci: $1\"; }; f"
+    cmtdocs = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | docs: $1\"; }; f"
+    cmtstyle = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | style: $1\"; }; f"
+    cmtrefactor = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | refactor: $1\"; }; f"
+    cmtperf = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | perf: $1\"; }; f"
+    cmttest = "!f() { git commit -m \"$(git rev-parse --abbrev-ref HEAD) | test: $1\"; }; f"
