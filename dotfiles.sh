@@ -14,7 +14,7 @@ EOF
 
 install() {
   dotfiles_repo_dir=$(pwd)
-  dotfiles_home_dir=(.gitconfig .gitconfig-github .gitconfig-ncloudtech .gitignore_global .zshrc .config)
+  dotfiles_home_dir=(.gitconfig .gitconfig-github .gitconfig-ncloudtech .gitignore-global .zshrc .config)
 
   for dotfile in "${dotfiles_home_dir[@]}"
   do
