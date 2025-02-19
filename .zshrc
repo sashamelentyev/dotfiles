@@ -1,8 +1,5 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export PATH="$PATH:$(go env GOPATH)/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
 export GOPRIVATE=gitlab.stageoffice.ru
 
 export LANG=en_US.UTF-8
