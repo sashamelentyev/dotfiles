@@ -1,7 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
-export PATH="$PATH:~/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export GOPRIVATE=gitlab.stageoffice.ru
@@ -37,4 +36,9 @@ mk() {
 
 mkd() {
   mkdir -p "$@" && cd "$@"
+}
+
+update_go_deps() {
+  go get $(go list -f '{{if not (or .Main .Indirect)}}{{.Path}}{{end}}' -m all)
+  go mod tidy
 }
