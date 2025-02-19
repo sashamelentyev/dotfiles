@@ -31,7 +31,7 @@ node_modules/
 *.tar
 *.zip
 
-# Go files after sed
+# Go files after `sed`
 *.go-e
 
 # Vi
