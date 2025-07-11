@@ -1,5 +1,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export PATH=$PATH:/Users/sashamelentyev/go/bin
+export PATH=$PATH:/Users/sashamelentyev/Library/Python/3.9/bin
 export LANG=en_US.UTF-8
 export TERM=screen-256color
 export EDITOR=nvim

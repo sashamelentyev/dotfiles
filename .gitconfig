@@ -15,3 +15,6 @@
 
 [includeIf "gitdir:/Users/sashamelentyev/go/src/gitlab.stageoffice.ru/"]
   path = .gitconfig-ncloudtech
+
+[includeIf "gitdir:/Users/sashamelentyev/Repositories/sourcecraft.dev/"]
+  path = .gitconfig-sourcecraft

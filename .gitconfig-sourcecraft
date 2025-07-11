@@ -1,0 +1,25 @@
+[core]
+	excludesFile = ~/.gitignore-global
+
+[user]
+	name = Sasha Melentyev
+	email = sasha@m8.ru
+
+[alias]
+    a = add
+    aa = add -A
+    c = commit --signoff
+    co = checkout
+    contributors = shortlog -nse
+    sm = submodule
+
+    cmtfix = "!f() { git commit --signoff -m \"fix: $1\"; }; f"
+    cmtfeat = "!f() { git commit --signoff -m \"feat: $1\"; }; f"
+    cmtbuild = "!f() { git commit --signoff -m \"build: $1\"; }; f"
+    cmtchore = "!f() { git commit --signoff -m \"chore: $1\"; }; f"
+    cmtci = "!f() { git commit --signoff -m \"ci: $1\"; }; f"
+    cmtdocs = "!f() { git commit --signoff -m \"docs: $1\"; }; f"
+    cmtstyle = "!f() { git commit --signoff -m \"style: $1\"; }; f"
+    cmtrefactor = "!f() { git commit --signoff -m \"refactor: $1\"; }; f"
+    cmtperf = "!f() { git commit --signoff -m \"perf: $1\"; }; f"
+    cmttest = "!f() { git commit --signoff -m \"test: $1\"; }; f"
